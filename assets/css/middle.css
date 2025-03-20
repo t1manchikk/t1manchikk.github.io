@@ -1,0 +1,30 @@
+.heading-with-stars {
+    position: relative;
+    padding-bottom: 62px;
+    font-size: 64px;
+    font-weight: bold;
+  }
+  
+  .heading-with-stars::after {
+    content: "*****";
+    position: absolute;
+    font-size: 20px;
+    bottom: 24px;
+    left: 0;
+    color: var(--custom-green);
+  }
+  
+  .stars-divider {
+    color: var(--custom-green);
+    font-size: 20px;
+  }
+
+  .green-underline {
+    width: 180px;
+    border-bottom: 1px solid var(--custom-green);
+    margin: 28px 0 20px;
+  }
+
+  .drop-shadow-custom {
+    box-shadow: 0 35px 35px rgba(0, 0, 0, 0.25);
+  }

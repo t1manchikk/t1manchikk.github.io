@@ -1,0 +1,27 @@
+.search-container {
+    width: 350px;
+    height: 30px;
+    border-bottom: 1px solid var(--custom-gray-900);
+  }
+  
+  .search-container input {
+    background: transparent;
+    border: none;
+    outline: none;
+  }
+
+  .hero-section {
+    height: 850px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5px;
+    margin-top: -133px;
+  }
+  
+  .btn-custom-green {
+    background-color: var(--custom-green);
+    color: white;
+    text-transform: uppercase;
+    padding: 16px 30px;
+  }

@@ -1,0 +1,8 @@
+.footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .bg-custom-blue {
+    background-color: var(--custom-gray-900);
+  }
