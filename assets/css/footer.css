@@ -1,0 +1,19 @@
+.footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .social-icons a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
