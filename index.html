@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/middle.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <title>Agridera</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script>
+      function toggleMenu() {
+          const navMenu = document.querySelector('.nav-menu');
+          const burger = document.querySelector('.burger-menu');
+          const header = document.querySelector('header');
+          const body = document.body;
+
+          navMenu.classList.toggle('active');
+          burger.classList.toggle('active');
+          header.classList.toggle('menu-active');
+          body.classList.toggle('menu-open');
+      }
+    </script>
+  </head>
+  <body>
+    <header class="wrap d-flex justify-content-between pt-3">
+      <div class="logo-container" style="width: 226px; height: 113px;">
+        <a href="index.html"><img src="/assets/img/icons/logo.png" alt="logo" class="img-fluid" /></a>
+      </div>
+      <div class="d-flex flex-column justify-content-between">
+        <div class="search-container d-flex justify-content-between align-items-center align-self-end">
+          <input role="search" type="text" class="align-self-center" placeholder="Search" />
+          <div style="width: 18px; height: 18px;">
+            <img src="/assets/img/icons/ico_search.svg" alt="search" />
+          </div>
+        </div>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <nav class="nav-menu">
+          <div class="mobile-logo-container" style="width: 226px; height: 113px;">
+            <a href="index.html"><img src="/assets/img/icons/logo.png" alt="logo" class="img-fluid" /></a>
+          </div>
+
+          <div class="mobile-search-container d-flex justify-content-between align-items-center">
+            <input role="search" type="text" class="align-self-center" placeholder="Search" />
+            <div style="width: 18px; height: 18px;">
+              <img src="/assets/img/icons/ico_search.svg" alt="search" />
+            </div>
+          </div>
+          
+          <ul class="d-flex justify-content-between list-unstyled" style="width: 500px;">
+            <li><a href="index.html" class="text-custom-gray-900 text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-custom-gray-900 text-decoration-none">Company Profile</a></li>
+            <li><a href="index2.html" class="text-custom-gray-900 text-decoration-none">Products</a></li>
+            <li><a href="#" class="text-custom-gray-900 text-decoration-none">Services</a></li>
+            <li><a href="#" class="text-custom-gray-900 text-decoration-none">R & D</a></li>
+            <li><a href="index4.html" class="text-custom-gray-900 text-decoration-none">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="app">
+    <main>
+      <section class="hero-section" style="background-image: url(/assets/img/slider/bg.jpg)">
+        <div class="text-center wrap d-flex flex-column align-items-center justify-content-center h-100">
+          <h1 class="text-custom-brown fw-bold" style="font-size: 3rem;">
+            Agridera Seeds and Agriculture Ltd
+          </h1>
+          <div class="mt-5">
+            <a href="#" class="btn btn-custom-green1">Read more</a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <ul class="text-custom-gray-900 d-flex justify-content-center align-items-end py-5 list-unstyled" style="gap: 70px;background-color: white;">
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/wheat.svg" class="align-self-center" style="width: 20px;" alt="wheat" />
+            <span class="fs-5 mt-3">Wheat</span>
+          </li>
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/watermelon.svg" class="align-self-center" style="width: 50px;" alt="wheat" />
+            <span class="fs-5 mt-3">Confection Watermelon</span>
+          </li>
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/clover.svg" class="align-self-center" style="width: 50px;" alt="clover" />
+            <span class="fs-5 mt-3">Clover</span>
+          </li>
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/conf_sunflower.svg" class="align-self-center" style="width: 50px;" alt="conf_sunflower" />
+            <span class="fs-5 mt-3">Confection Sunflower</span>
+          </li>
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/tomato.svg" class="align-self-center" style="width: 50px;" alt="tomato" />
+            <span class="fs-5 mt-3">Tomato</span>
+          </li>
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/eggplant.svg" class="align-self-center" style="width: 50px;" alt="eggplant" />
+            <span class="fs-5 mt-3">Eggplant P/O</span>
+          </li>
+          <li class="d-flex flex-column">
+            <img src="/assets/img/icons/sunflower.svg" class="align-self-center" style="width: 60px;" alt="sunflower" />
+            <span class="fs-5 mt-3">Ornamental Sunflower</span>
+          </li>
+        </ul>
+      </section>
+      <section class="bg-custom-main py-5" style="background-image: url(/assets/img/icons/bg-logo.svg); background-repeat: no-repeat; background-size: cover; background-position: center;">
+        <div class="wrap">
+          <div class="row mb-5 pb-5">
+            <div class="col-md-6 text-custom-gray-900">
+              <div class="mb-4">
+                <h2 class="heading-with-stars">Vision</h2>
+              </div>
+              <p class="fs-5">
+                We believe in long-term growth with an emphasis on the potential
+                of emerging markets. We also support the global need of feeding
+                the growing population.
+              </p>
+            </div>
+            <div class="col-md-6">
+              <div class="drop-shadow-custom" style="width: 100%; height: 100%;">
+                <img src="/assets/img/content/plant_in_hand.jpg" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-6">
+              <div class="drop-shadow-custom" style="width: 100%; height: 100%;">
+                <img src="/assets/img/content/plants.jpg" alt="" class="img-fluid" />
+              </div>
+            </div>
+            <div class="col-md-6 text-custom-gray-900">
+              <div class="mb-4">
+                <h2 class="heading-with-stars">Mission</h2>
+              </div>
+              <p class="fs-5">
+                Breeding and marketing seeds for advanced field crops and
+                vegetable varieties that provide an added value to all supply
+                chain partners.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-custom-gray-100">
+        <div class="wrap py-5">
+          <h2 class="text-center text-custom-gray-900 fw-bold" style="font-size: 64px;">
+            Agridera's main activities
+          </h2>
+          <div class="text-center stars-divider py-4">*****</div>
+          <div class="row">
+            <div class="col-md-4 d-flex flex-column align-items-center">
+              <div>
+                <img src="/assets/img/content/cotton.png" alt="cotton" class="img-fluid" />
+              </div>
+              <h4 class="text-custom-green fw-bold pt-3 fs-4">
+                Open field crop seeds
+              </h4>
+              <div class="green-underline"></div>
+              <div class="text-center" style="max-width: 250px;">
+                wheat, cotton, legumes, hybrid confection sunflower
+              </div>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center">
+              <div>
+                <img src="/assets/img/content/tommato.png" alt="tomato" class="img-fluid" />
+              </div>
+              <h4 class="text-custom-green fw-bold pt-3 fs-4">
+                Vegetable seeds
+              </h4>
+              <div class="green-underline"></div>
+              <div class="text-center" style="max-width: 250px;">
+                hybrid open field tomatoes, eggplant, onion, paprika, etc.
+              </div>
+            </div>
+            <div class="col-md-4 d-flex flex-column align-items-center">
+              <div>
+                <img src="/assets/img/content/sunflower.png" alt="cotton" class="img-fluid" />
+              </div>
+              <h4 class="text-custom-green fw-bold pt-3 fs-4">
+                Open field crop seeds
+              </h4>
+              <div class="green-underline"></div>
+              <div class="text-center" style="max-width: 250px;">
+                hybrid cut sunflowers, hybrid patio tomatoes, Bells of Irland,
+                etc.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    </div>
+    <footer>
+      <div class="bg-custom-blue">
+        <div class="wrap d-flex align-items-center py-3 justify-content-between">
+          <nav>
+            <ul class="list-unstyled d-flex footer-links mb-0" style="gap: 36px;">
+              <li><a href="#">PROFILE</a></li>
+              <li><a href="#">MANAGEMENT</a></li>
+              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#">R&D</a></li>
+              <li><a href="#">SITEMAP</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div>
+            <ul class="list-unstyled d-flex mb-0" style="gap: 14px;">
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_in.svg" alt="linkedIn" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_inst.svg" alt="instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_tube.svg" alt="youtube" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_tw.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_fb.svg" alt="meta" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-custom-gray-900 text-center text-custom-gray-400 py-2" style="font-size: 14px;">
+        AGRIDERA SEEDS & AGRICULTURE LTD. © 2020
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

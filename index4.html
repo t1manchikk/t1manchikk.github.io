@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/middle.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <title>Contact</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script>
+      function toggleMenu() {
+          const navMenu = document.querySelector('.nav-menu');
+          const burger = document.querySelector('.burger-menu');
+          const header = document.querySelector('header');
+          const body = document.body;
+
+          navMenu.classList.toggle('active');
+          burger.classList.toggle('active');
+          header.classList.toggle('menu-active');
+          body.classList.toggle('menu-open');
+      }
+      
+    </script>
+  </head>
+  <body>
+    <header class="wrap d-flex justify-content-between pt-3 pb-3 fixed-header">
+      <div class="logo2" style="width: 226px; height: 113px;">
+        <a href="index.html"><img src="/assets/img/icons/logo.png" alt="logo" class="img-fluid" /></a>
+      </div>
+      <div class="d-flex flex-column justify-content-between">
+        <div class="search-container d-flex justify-content-between align-items-center align-self-end">
+          <input role="search" type="text" class="align-self-center" placeholder="Search" />
+          <div style="width: 18px; height: 18px;">
+            <img src="/assets/img/icons/ico_search.svg" alt="search" />
+          </div>
+        </div>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <nav class="nav-menu">
+          <div class="mobile-logo-container" style="width: 226px; height: 113px;">
+            <a href="index.html"><img src="/assets/img/icons/logo.png" alt="logo" class="img-fluid" /></a>
+          </div>
+
+          <div class="mobile-search-container d-flex justify-content-between align-items-center">
+            <input role="search" type="text" class="align-self-center" placeholder="Search" />
+            <div style="width: 18px; height: 18px;">
+              <img src="/assets/img/icons/ico_search.svg" alt="search" />
+            </div>
+          </div>
+
+        <ul class="d-flex justify-content-between list-unstyled" style="width: 500px;">
+          <li><a href="index.html" class="text-custom-gray-900 text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-custom-gray-900 text-decoration-none">Company Profile</a></li>
+          <li><a href="index2.html" class="text-custom-gray-900 text-decoration-none">Products</a></li>
+          <li><a href="#" class="text-custom-gray-900 text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-custom-gray-900 text-decoration-none">R & D</a></li>
+          <li><a href="index4.html" class="text-custom-gray-900 text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <div id="app">
+    <main>
+        <section class="hero-banner">
+            <img src="/assets/img/content/image 7.jpg" alt="Tomato plants with ripe tomatoes" class="img-fluid w-100 h-100 object-fit-cover" />
+          </section>
+
+
+          
+          <section class="contact-section container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 custom-padding">
+
+                    <section class="cart-section container py-3" v-if="!orderSubmitted">
+                        <h2>Shopping Cart</h2>
+                        <table class="cart-table">
+                            <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Product</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="cart-table-body">
+                            </tbody>
+                        </table>
+                    </section>
+        
+                    <div v-if="!orderSubmitted">
+                        <h2 class="text-left mb-4">Contact us</h2>
+                        <div class="star">*****</div>
+                        <form class="row" @submit.prevent="makeOrder">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name *</label>
+                                    <input type="text" class="form-control" id="name" v-model="contactFields.name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="companyName" class="form-label">Company Name</label>
+                                    <input type="text" class="form-control" id="companyName" v-model="contactFields.companyName">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="position" class="form-label">Position</label>
+                                    <input type="text" class="form-control" id="position" v-model="contactFields.position">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" v-model="contactFields.city">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="country" v-model="contactFields.country">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telephone" class="form-label">Telephone</label>
+                                    <input type="tel" class="form-control" id="telephone" v-model="contactFields.telephone">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email *</label>
+                                    <input type="email" class="form-control" id="email" v-model="contactFields.email" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="userType" class="form-label">You are a</label>
+                                    <select class="form-select" id="userType" v-model="contactFields.userType">
+                                        <option>seed producer</option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="otherSpecify" class="form-label">If other, please specify</label>
+                                    <input type="text" class="form-control" id="otherSpecify" v-model="contactFields.otherSpecify">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="interested" class="form-label">You are interested in</label>
+                                    <textarea class="form-control" id="interested" rows="11" v-model="contactFields.interested"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="captcha" class="form-label">Please type this code</label>
+                                    <div class="d-flex align-items-center">
+                                        <img src="/assets/img/content/image 12.png" alt="captcha">
+                                        <input type="text" class="form-control mx-2" id="captcha" style="width: 220px;" v-model="contactFields.captcha" required>
+                                        <button type="submit" class="btn btn-custom-green">Send Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div v-if="orderSubmitted" class="order-confirmation py-4">
+                        <div class="alert alert-success mb-4">
+                            <h4 class="alert-heading">Thank you for your order!</h4>
+                            <p>Your order has been placed successfully.</p>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-header bg-light">
+                                <h3 class="mb-0">Order Details</h3>
+                            </div>
+                            <div class="card-body">
+                                <h4>Contact Information</h4>
+                                <dl class="row">
+                                    <dt class="col-sm-3">Name:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.name }}</dd>
+                                    
+                                    <dt class="col-sm-3">Email:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.email }}</dd>
+                                    
+                                    <dt class="col-sm-3">Company:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.companyName || 'Not provided' }}</dd>
+                                    
+                                    <dt class="col-sm-3">Position:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.position || 'Not provided' }}</dd>
+                                    
+                                    <dt class="col-sm-3">Location:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.city }} {{ contactFields.country ? ', ' + contactFields.country : '' }}</dd>
+                                    
+                                    <dt class="col-sm-3">Telephone:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.telephone || 'Not provided' }}</dd>
+                                    
+                                    <dt class="col-sm-3">Customer Type:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.userType }}</dd>
+                                    
+                                    <dt class="col-sm-3" v-if="contactFields.userType === 'Other'">Specified:</dt>
+                                    <dd class="col-sm-9" v-if="contactFields.userType === 'Other'">{{ contactFields.otherSpecify }}</dd>
+                                    
+                                    <dt class="col-sm-3">Interested in:</dt>
+                                    <dd class="col-sm-9">{{ contactFields.interested || 'Not specified' }}</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center mt-4">
+                            <button @click="resetOrder" class="btn btn-outline-primary">Place Another Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    </div>
+    <section class="our-address container py-5">
+      <div class="row justify-content-center">
+          <div class="col-lg-10 text-center">
+            <h2 class="mb-4 pb-2 border-bottom">Our Address</h2>
+              <div class="address-details">
+                  <p class="mb-2">AGRIDERA Seeds & Agriculture Ltd.</p>
+                  <p class="mb-2">P.O Box 103,</p>
+                  <p class="mb-2">Gedera 70750, Israel.</p>
+                  <p class="mb-2">Telephone: <span style="color: #57984C;">+972 8 944 9222</span></p>
+              </div>
+          </div>
+      </div>
+  </section>
+    <footer>
+      <div class="bg-custom-blue">
+        <div class="wrap d-flex align-items-center py-3 justify-content-between">
+          <nav>
+            <ul class="list-unstyled d-flex footer-links mb-0" style="gap: 36px;">
+              <li><a href="#">PROFILE</a></li>
+              <li><a href="#">MANAGEMENT</a></li>
+              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#">R&D</a></li>
+              <li><a href="#">SITEMAP</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div>
+            <ul class="list-unstyled d-flex mb-0 social-icons" style="gap: 14px;">
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_in.svg" alt="linkedIn" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_inst.svg" alt="instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_tube.svg" alt="youtube" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_tw.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_fb.svg" alt="meta" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-custom-gray-900 text-center text-custom-gray-400 py-2" style="font-size: 14px;">
+        AGRIDERA SEEDS & AGRICULTURE LTD. © 2020
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/middle.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
+    <link rel="stylesheet" href="/assets/css/responsive.css" />
+
+    <title>Garlic - Fresh Market Garlic Varieties</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="/js/main.js" defer></script>
+    <script>
+      function toggleMenu() {
+          const navMenu = document.querySelector('.nav-menu');
+          const burger = document.querySelector('.burger-menu');
+          const header = document.querySelector('header');
+          const body = document.body;
+
+          navMenu.classList.toggle('active');
+          burger.classList.toggle('active');
+          header.classList.toggle('menu-active');
+          body.classList.toggle('menu-open');
+      }
+          </script>
+  </head>
+  <body>
+    <header class="wrap d-flex justify-content-between pt-3 pb-3 fixed-header">
+      <div class="logo2" style="width: 226px; height: 113px;">
+        <a href="index.html"><img src="/assets/img/icons/logo.png" alt="logo" class="img-fluid" /></a>
+      </div>
+      <div class="d-flex flex-column justify-content-between">
+        <div class="search-container d-flex justify-content-between align-items-center align-self-end">
+          <input role="search" type="text" class="align-self-center" placeholder="Search" />
+          <div style="width: 18px; height: 18px;">
+            <img src="/assets/img/icons/ico_search.svg" alt="search" />
+          </div>
+        </div>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
+        <nav class="nav-menu">
+          <div class="mobile-logo-container" style="width: 226px; height: 113px;">
+            <a href="index.html"><img src="/assets/img/icons/logo.png" alt="logo" class="img-fluid" /></a>
+          </div>
+
+          <div class="mobile-search-container d-flex justify-content-between align-items-center">
+            <input role="search" type="text" class="align-self-center" placeholder="Search" />
+            <div style="width: 18px; height: 18px;">
+              <img src="/assets/img/icons/ico_search.svg" alt="search" />
+            </div>
+          </div>
+
+        <ul class="d-flex justify-content-between list-unstyled" style="width: 500px;">
+          <li><a href="index.html" class="text-custom-gray-900 text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-custom-gray-900 text-decoration-none">Company Profile</a></li>
+          <li><a href="index2.html" class="text-custom-gray-900 text-decoration-none">Products</a></li>
+          <li><a href="#" class="text-custom-gray-900 text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-custom-gray-900 text-decoration-none">R & D</a></li>
+          <li><a href="index4.html" class="text-custom-gray-900 text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="hero-banner">
+        <img src="/assets/img/slider/2.jpg" alt="Garlic plants with ripe tomatoes" class="img-fluid w-100 h-100 object-fit-cover" />
+      </section>
+
+      <section class="page-title">
+        <div class="container">
+            <div class="intro-text">
+              <h1>Garlic Fresh Market Varieties</h1>
+                <div class="star">*****</div>
+                <p>Agridera aims to be one of the world's leading companies in the breeding, production, and marketing of Garlic seeds. <b>We invest intensively in research and development to provide solutions to growers and consumers in numerous countries around the world.</b> In particular, we breed improved disease-resistant cultivars adapted to different markets globally.</p>
+                <p>Currently, emphasis is placed on combining Garlic Yellow Leaf Curl Virus (TYLCV) and Garlic Spotted Wilt Virus (TSWV) resistances with other soil borne diseases into superior Garlic breeding lines and hybrids. Moreover, comprehensive efforts are being undertaken to develop varieties resistance to TBRFV virus (Garlic Brown Rugose Fruit Virus).</p>
+                <p>In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, red fruit color, flavor, crack resistance, shelf life, and high/low temperature fruit set. Combinations of quality features and disease resistance are sought in a variety of types, namely round and elongated shapes.</p>
+                <div class="mt-4 d-flex flex-wrap justify-content-start gap-4">
+                    <div class="feature-item d-flex align-items-center">
+                        <div class="feature-icon">|</div>
+                        <span>Agirdera Garlic breeding programs are focusing on three main segments: Greenhouse Indeterminate Garlices, Open-field Indeterminate Garlices, and Bush Type Open-field Garlices.</span>
+                    </div>
+                </div>
+                <div class="white-tomatoes">
+                    <div class="white-card">
+                        <h2 class="white-title">Greenhouse Garlic Breeding Program</h2>
+                        <p class="white-description"><b>This breeding is aimed for the Spanish and Turkish markets.</b>
+                            For single and cluster picks, round fruit shape and resistances of TYLCV, TSWV, Nematodes and FORL (Fusarium oxysporum f.sp. radicis-lycopersici). Some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).  </p>
+                    </div>
+                    <div class="white-card">
+                        <h2 class="white-title">Open-field Indeterminate Garlices</h2>
+                        <p class="white-description"><b>This breeding is for Brazilian, Moroccan, and Turkish markets.</b>
+                            The main focus is on large round shape fruits (200 grams plus); and resistances of TYLCV, TSWV, Nematodes and FORL. In the near future, F3 (Fusarium oxysporum f.sp. lycopersici) will be included as basic resistance in our cultivars.</p>
+                    </div>
+                    <div class="white-card">
+                        <h2 class="white-title">Open-field Bush Type Garlices</h2>
+                        <p class="white-description"><b>This breeding is for Mediterranean markets.</b>We breed round and elongated shapes, standard sizes (140- 180 grams), and beef sizes (min. 180 grams up to 300 grams and more). We combine the resistances of TYLCV, TSWV and Nematodes as basic resistances in our hybrids. However, some hybrids may include more resistances, such as Cladosporium and Leveillula Taurica (Lv).</p>
+                    </div>
+                    
+                </div>
+                <div class="mt-4 d-flex flex-wrap justify-content-start gap-4">
+                    <div class="feature-item d-flex align-items-center">
+                        <div class="feature-icon">|</div>
+                        <span><b>Agridera operates through international and local distributers around the world. </b></span>
+                    </div>
+                </div>
+
+                <div id="app">
+                  <div class="row">
+                    <div class="col-md-4 mb-4" v-for="product in products" :key="product.id">
+                      <div class="tomato-card">
+                          <a :href="'index3.html#' + product.id">
+                              <img :src="product.image" :alt="product.title" class="tomato-img" />
+                          </a>
+                          <a :href="'index3.html#' + product.id">
+                              <div class="tomato-name">{{ product.title }}</div>
+                              <div class="tomato-desc">{{ product.short_text }}</div>
+                          </a>
+                      </div>
+                  </div>
+                  
+                  </div>
+                </div>
+                
+            </div>  
+        </div>
+    </section>
+
+    </main>
+    
+    <footer>
+      <div class="bg-custom-blue">
+        <div class="wrap d-flex align-items-center py-3 justify-content-between">
+          <nav>
+            <ul class="list-unstyled d-flex footer-links mb-0" style="gap: 36px;">
+              <li><a href="#">PROFILE</a></li>
+              <li><a href="#">MANAGEMENT</a></li>
+              <li><a href="#">PRODUCTS</a></li>
+              <li><a href="#">R&D</a></li>
+              <li><a href="#">SITEMAP</a></li>
+              <li><a href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+          <div>
+            <ul class="list-unstyled d-flex mb-0 social-icons" style="gap: 14px;">
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_in.svg" alt="linkedIn" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_inst.svg" alt="instagram" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_tube.svg" alt="youtube" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_tw.svg" alt="twitter" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="/assets/img/icons/social/Ico_fb.svg" alt="meta" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-custom-gray-900 text-center text-custom-gray-400 py-2" style="font-size: 14px;">
+        AGRIDERA SEEDS & AGRICULTURE LTD. © 2020
+      </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
